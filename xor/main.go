@@ -9,7 +9,7 @@ import (
 	"xor/cipherer"
 )
 
-var mode = flag.String("mode", "cipher", "Set to 'chiper' or 'dechiper' . Default is 'chiper'.")
+var mode = flag.String("mode", "cipher", "Set to 'chiper' or 'decipher' . Default is 'chiper'.")
 var secretKey = flag.String("secret", "", "Your secret key. Must contain at least 1 character")
 
 func main() {
@@ -57,7 +57,7 @@ func getUserInput(msg string) string {
 			continue
 		}
 
-		return strings.TrimRight(result, "\r\n")
+		return strings.TrimRight(result, "\n")
 	}
 
 }
